@@ -7,7 +7,7 @@ const stripe = window.Stripe("pk_test_l8tg5JiFXbCNRSIy20rWCYaL00WgI8qlQs");
 const PurchaseButton = () => {
   const [purchase] = usePurchaseMutation({
     variables: {
-      releaseId: 6
+      releaseId: 1
     }
   });
 

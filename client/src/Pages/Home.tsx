@@ -5,7 +5,7 @@ import PurchaseButton from "../components/PurchaseButton";
 const Home = () => {
   const { data, loading } = useCheckStockSubscription({
     variables: {
-      releaseId: 6
+      releaseId: 1
     }
   });
 
