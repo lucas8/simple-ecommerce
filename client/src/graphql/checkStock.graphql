@@ -1,0 +1,3 @@
+subscription CheckStock($releaseId: Int!) {
+  checkStock(releaseId: $releaseId)
+}

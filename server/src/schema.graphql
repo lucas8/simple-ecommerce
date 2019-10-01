@@ -1,0 +1,58 @@
+type Query {
+  releases: [Release]!
+}
+
+type Subscription {
+  checkStock(releaseId: Int!): Boolean!
+}
+
+type Mutation {
+  createRelease(stock: Int!): Release!
+  editRelease(releaseId: Int!, newStock: Int!): Release!
+
+  purchase(releaseId: Int!): StripeCheckout!
+}
+
+type Release {
+  stock: Int!
+}
+
+type StripeCheckout {
+  session: String
+}
+
+# type StripeSessionResponse {
+#   id: String
+#   object: String
+#   billing_address_collection: String
+#   cancel_url: String
+#   client_reference_id: String
+#   customer: String
+#   customer_email: String
+#   display_items: [DisplayItem]
+#   livemode: Boolean
+#   locale: String
+#   mode: String
+#   payment_intent: String
+#   payment_method_types: [String]
+#   setup_intent: String
+#   submit_type: String
+#   subscription: String
+#   success_url: String
+# }
+
+# type DisplayItem {
+#   amount: Int
+#   currency: String
+#   custom: CustomItem
+#   quantity: Int
+#   type: String
+#   sku: String
+#   plan: String
+# }
+
+# type CustomItem {
+#   description: String
+#   images: [String]
+#   name: String
+# }

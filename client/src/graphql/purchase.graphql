@@ -1,0 +1,5 @@
+mutation Purchase($releaseId: Int!) {
+  purchase(releaseId: $releaseId) {
+    session
+  }
+}
