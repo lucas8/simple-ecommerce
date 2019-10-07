@@ -11,7 +11,7 @@ export const main = async () => {
 
   const server = new GraphQLServer({
     resolvers: glob
-      .sync(`${path.join(__dirname, "../modules")}/**/resolvers.?s`)
+      .sync(`${path.join(__dirname, "./modules")}/**/resolvers.?s`)
       .map(resolver => require(resolver).resolvers),
     typeDefs: "./src/schema.graphql",
     context: request => ({
