@@ -13,7 +13,7 @@
     "stripe": "^7.9.1",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
-    "typeorm": "^0.2.19"
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@types/stripe": "^6.32.5",
